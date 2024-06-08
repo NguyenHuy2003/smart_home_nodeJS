@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "Tu Nhan Ai",
+  "author": "Huy Nguyen",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 14.3, "left": -91.4, "attrs": {} },
@@ -36,19 +36,11 @@
     },
     { "type": "wokwi-servo", "id": "servo1", "top": 117.67, "left": 341.8, "attrs": {} },
     {
-      "type": "wokwi-pir-motion-sensor",
-      "id": "pir1",
-      "top": -15.2,
-      "left": -276.18,
-      "attrs": {}
-    },
-    { "type": "wokwi-vcc", "id": "vcc2", "top": 125.56, "left": -278.4, "attrs": {} },
-    {
       "type": "wokwi-led",
       "id": "led1",
-      "top": 188.4,
-      "left": -226.6,
-      "attrs": { "color": "red" }
+      "top": 150,
+      "left": -236.2,
+      "attrs": { "color": "orange" }
     },
     {
       "type": "wokwi-led",
@@ -57,16 +49,20 @@
       "left": -140.2,
       "attrs": { "color": "yellow" }
     },
-    { "type": "wokwi-a4988", "id": "drv1", "top": -120, "left": -120, "attrs": {} },
     {
-      "type": "wokwi-stepper-motor",
-      "id": "stepper1",
-      "top": -313.93,
-      "left": -60.67,
-      "attrs": { "size": "17" }
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": 44.4,
+      "left": -236.2,
+      "attrs": { "color": "purple" }
     },
-    { "type": "wokwi-gnd", "id": "gnd2", "top": -40.04, "left": -2.06, "attrs": {} },
-    { "type": "wokwi-vcc", "id": "vcc3", "top": -53.85, "left": 34.91, "attrs": {} }
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": 15.6,
+      "left": -178.6,
+      "attrs": { "color": "magenta" }
+    }
   ],
   "connections": [
     [ "esp:GPIO2", "hc-sr04:TRIG", "", [] ],
@@ -85,22 +81,14 @@
     [ "servo1:GND", "gnd1:GND", "black", [ "h-19.07", "v-156.89" ] ],
     [ "servo1:PWM", "esp:D5", "green", [ "h-36.88", "v126.3", "h-269.4", "v-186.95" ] ],
     [ "servo1:V+", "vcc1:VCC", "red", [ "h-34.56", "v-18.64" ] ],
-    [ "pir1:OUT", "esp:D14", "blue", [ "v0" ] ],
-    [ "pir1:GND", "esp:GND.2", "black", [ "v0" ] ],
-    [ "pir1:VCC", "vcc2:VCC", "red", [ "v103.3", "h-36.05", "v-8.72" ] ],
     [ "led1:A", "esp:D12", "green", [ "v9.5", "h15.05", "v-111.73" ] ],
     [ "led1:C", "esp:GND.2", "black", [ "v19.8", "h42.48", "v-69.73" ] ],
-    [ "gnd2:GND", "drv1:GND.1", "black", [ "v0" ] ],
-    [ "vcc3:VCC", "drv1:VDD", "red", [ "v4.41", "h-16.35", "v-32.7" ] ],
-    [ "stepper1:B-", "drv1:1B", "green", [ "v0" ] ],
-    [ "stepper1:B+", "drv1:1A", "green", [ "v0" ] ],
-    [ "stepper1:A+", "drv1:2A", "green", [ "v0" ] ],
-    [ "stepper1:A-", "drv1:2B", "green", [ "v0" ] ],
-    [ "drv1:DIR", "esp:D33", "blue", [ "h-30.94", "v156" ] ],
-    [ "drv1:STEP", "esp:D25", "blue", [ "h-36.85", "v166.34" ] ],
-    [ "drv1:RESET", "drv1:SLEEP", "red", [ "h0" ] ],
     [ "led4:C", "esp:GND.2", "black", [ "v28.8", "h-18.8", "v-134.4" ] ],
-    [ "led4:A", "esp:D13", "green", [ "v28.8", "h9.6", "v-144" ] ]
+    [ "led4:A", "esp:D13", "green", [ "v28.8", "h9.6", "v-144" ] ],
+    [ "led5:A", "esp:D25", "green", [ "v0" ] ],
+    [ "led5:C", "esp:GND.2", "black", [ "v38.4", "h48.4", "v38.4" ] ],
+    [ "led6:A", "esp:D14", "green", [ "v0" ] ],
+    [ "led6:C", "esp:GND.2", "black", [ "v28.8", "h48.4", "v76.8" ] ]
   ],
   "dependencies": {}
 }

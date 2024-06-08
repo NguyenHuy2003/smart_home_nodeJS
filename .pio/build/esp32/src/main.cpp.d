@@ -282,5 +282,4 @@
  .pio/libdeps/esp32/DHT\ sensor\ library\ for\ ESPx/DHTesp.h \
  .pio/libdeps/esp32/ESP32Servo/src/ESP32Servo.h \
  .pio/libdeps/esp32/ESP32Servo/src/ESP32PWM.h \
- C:/Users/ADMIN/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-ledc.h \
- .pio/libdeps/esp32/Stepper/src/Stepper.h
+ C:/Users/ADMIN/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-ledc.h
